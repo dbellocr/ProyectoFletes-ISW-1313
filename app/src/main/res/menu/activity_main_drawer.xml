@@ -16,5 +16,11 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_car"
             android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_camiones"
+            android:title="@string/menu_camiones"
+            tools:ignore="DuplicateIds" />
     </group>
 </menu>

@@ -2,6 +2,9 @@ package com.isw.proyectofletes_isw_1313
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,7 +14,15 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.isw.proyectofletes_isw_1313.databinding.ActivityPrincipalBinding
+import com.bumptech.glide.request.RequestOptions
+
+
+
 
 class Principal : AppCompatActivity() {
 
@@ -42,6 +53,23 @@ class Principal : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        actualizaPerfil(navView)
+    }
+
+    private fun actualizaPerfil(navView: NavigationView){
+        val vista: View = navView.getHeaderView(0)
+        val txtNombre : TextView = vista.findViewById(R.id.tvNombreUsuario)
+        val tvCorreo : TextView = vista.findViewById(R.id.tvCorreoUsuario)
+        val imgUsuario: ImageView = vista.findViewById(R.id.imagen_usuario)
+
+        val usuario: FirebaseUser? = Firebase.auth.currentUser
+
+        txtNombre.text = usuario?.displayName
+        tvCorreo.text = usuario?.email
+
+        Glide.with(this).load(usuario?.photoUrl).apply(RequestOptions().override(120, 120)).circleCrop().into(imgUsuario)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
