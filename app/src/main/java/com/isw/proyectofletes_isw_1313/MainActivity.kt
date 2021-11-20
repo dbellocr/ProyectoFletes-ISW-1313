@@ -57,12 +57,10 @@ class MainActivity : AppCompatActivity() {
                 firebaseAuthWithGoogle(account.idToken!!)
             }
             catch (e: Throwable){
-                val er = e
+
             }
 
         }
-
-
     }
 
 

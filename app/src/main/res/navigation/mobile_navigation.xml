@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.isw.proyectofletes_isw_1313.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_camionesFragment"
+            app:destination="@id/camionesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -22,4 +26,13 @@
         android:name="com.isw.proyectofletes_isw_1313.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/camionesFragment"
+        android:name="com.isw.proyectofletes_isw_1313.CamionesFragment"
+        android:label="@string/todos_camiones"
+        tools:layout="@layout/fragment_camiones" >
+        <action
+            android:id="@+id/action_camionesFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 </navigation>
