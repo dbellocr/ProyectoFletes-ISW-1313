@@ -5,55 +5,63 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.PackageManagerCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.isw.proyectofletes_isw_1313.adapter.VehiculoAdapter
+import com.isw.proyectofletes_isw_1313.databinding.FragmentCamionesBinding
+import com.isw.proyectofletes_isw_1313.model.Vehiculo
+import com.isw.proyectofletes_isw_1313.repository.IVehiculoRepository
+import retrofit2.Call
+import retrofit2.Response
+import androidx.core.content.PackageManagerCompat.LOG_TAG
+import retrofit2.Callback
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CamionesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CamionesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var _binding: FragmentCamionesBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_camiones, container, false)
-    }
+        _binding = FragmentCamionesBinding.inflate(inflater, container, false)
+        val root: View = binding.root
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CamionesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CamionesFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
+        IVehiculoRepository().getCamiones().enqueue(object : Callback<List<Vehiculo>> {
+            override fun onResponse(
+                call: Call<List<Vehiculo>>,
+                response: Response<List<Vehiculo>>
+            ) {
+                val vehiculos = response.body()
+
+                vehiculos?.let {
+                    mostrarCamiones(it)
                 }
             }
+
+            override fun onFailure(call: Call<List<Vehiculo>>, t: Throwable) {
+                Toast.makeText(context, t.message, Toast.LENGTH_LONG).show()
+            }
+        })
+
+        return root
     }
+    private fun mostrarCamiones(vehiculo: List<Vehiculo>)
+    {
+        binding.reciclador.layoutManager = LinearLayoutManager(context)
+        binding.reciclador.adapter = VehiculoAdapter(vehiculo)
+    }
+
 }

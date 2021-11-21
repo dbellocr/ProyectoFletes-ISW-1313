@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 // Cambiar el puerto aqui Erick
-const val BASE_URL = "http://127.0.0.1:4478/api"
+const val BASE_URL = "http://10.0.2.2:4478/api/"
 
 interface IVehiculoRepository {
 
