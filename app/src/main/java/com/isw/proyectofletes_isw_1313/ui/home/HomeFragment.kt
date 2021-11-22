@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.isw.proyectofletes_isw_1313.R
 import com.isw.proyectofletes_isw_1313.databinding.FragmentHomeBinding
 
@@ -28,8 +29,13 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
+
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.btReservarFletes.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_home_to_camionesFragment)
+        }
 
         return root
     }

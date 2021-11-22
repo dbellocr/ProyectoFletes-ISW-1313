@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }else{
-        Toast.makeText(baseContext, "No se autenticó", Toast.LENGTH_LONG).show()
+
     }
 
     override fun onStart() {

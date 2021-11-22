@@ -21,4 +21,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="todos_camiones">Todos los camiones</string>
+    <string name="cerrar_sesion_titulo">¿Desea cerrar sesion?</string>
+    <string name="cerrar_sesion_mensaje">¿Seguro/a que desea cerrar sesion?</string>
+    <string name="creadores">Creado por Daniel Bello y Erick Rodriguez</string>
 </resources>

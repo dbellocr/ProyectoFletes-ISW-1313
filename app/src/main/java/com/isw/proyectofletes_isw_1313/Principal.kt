@@ -2,6 +2,7 @@ package com.isw.proyectofletes_isw_1313
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -20,8 +21,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.isw.proyectofletes_isw_1313.databinding.ActivityPrincipalBinding
 import com.bumptech.glide.request.RequestOptions
-
-
+import com.isw.proyectofletes_isw_1313.helpers.AlertFacade
 
 
 class Principal : AppCompatActivity() {
@@ -37,10 +37,6 @@ class Principal : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarPrincipal.toolbar)
 
-        binding.appBarPrincipal.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_principal)
@@ -81,5 +77,25 @@ class Principal : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_principal)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_settings -> {
+                // Pasamos la funcion como parametro para que el boton "Si" ejecute la accion de cerrar sesion
+                AlertFacade.crearAlertaConfirmacion(getString(R.string.cerrar_sesion_titulo), getString(
+                                    R.string.cerrar_sesion_mensaje), this) { cerrarSesion() }
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+        return false
+
+    }
+
+    private fun cerrarSesion(){
+        // Termina el layoutprincipal y se regresa donde se llamo
+        Firebase.auth.signOut()
+        finish()
     }
 }

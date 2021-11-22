@@ -17,17 +17,20 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btReservarFletes"
+        android:drawableLeft="@drawable/ic_add_white"
+        android:drawablePadding="10sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Reservar Fletes" />
 
     <Button
-        android:id="@+id/btConsultar"
+        android:id="@+id/btConsultarFletes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/ic_camion_blanco"
         android:text="Consultar Fletes" />
 
 </LinearLayout>

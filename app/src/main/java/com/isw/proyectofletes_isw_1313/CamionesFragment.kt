@@ -22,7 +22,7 @@ import retrofit2.Callback
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
+//KOTLIN
 class CamionesFragment : Fragment() {
     private var _binding: FragmentCamionesBinding? = null
     private val binding get() = _binding!!
