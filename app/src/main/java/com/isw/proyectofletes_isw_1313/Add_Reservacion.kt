@@ -1,5 +1,6 @@
 package com.isw.proyectofletes_isw_1313
 
+import android.os.AsyncTask
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,6 +14,12 @@ import com.isw.proyectofletes_isw_1313.model.Reservacion
 import com.isw.proyectofletes_isw_1313.repository.IReservacionRepository
 import com.isw.proyectofletes_isw_1313.repository.ReservacionViewModel
 import com.isw.proyectofletes_isw_1313.repository.ReservacionViewModelFactory
+import org.json.JSONObject
+import java.io.DataOutputStream
+import java.net.HttpURLConnection
+import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.*
 
 class Add_Reservacion : Fragment() {
     private var _binding: FragmentAddReservacionBinding? = null
@@ -36,10 +43,11 @@ class Add_Reservacion : Fragment() {
         viewModel = ViewModelProvider(this, viewModelFactory).get(ReservacionViewModel::class.java)
 
         //Fecha del dia autom (Cambiar)
-        binding.etFechaServicio.setText("2021-12-07")
-        binding.etVehiculo.setText(/*args.vehiculoActual.placa.toString()*/"000")
+        val fechaActual= SimpleDateFormat("dd-MM-yyyy").format(Date())
+        binding.etFechaSolicitud.setText(fechaActual)
+        binding.etVehiculo.setText(/*args.vehiculoActual.placa.toString()*/"CL-164789")
 
-        binding.btAgregar.setOnClickListener { agregarReservacion() }
+        binding.btAgregar.setOnClickListener { EnviarReservacionPost() /*agregarReservacion()*/ }
             return root
     }
 
@@ -49,12 +57,16 @@ class Add_Reservacion : Fragment() {
             val materialOtro = binding.etMaterialOtro.text.toString()
             val vehiculo = binding.etVehiculo.text.toString()
             if (validos(fechaSolicitud, fechaServicio, materialOtro, vehiculo)) {
-
-                val fechaSolicitud = binding.etFechaSolicitud.text.toString()
+                val fechaActual= SimpleDateFormat("yyyy-MM-dd").format(Date())
+                val fechaSolicitud = fechaActual
                 val fechaServicio = binding.etFechaServicio.text.toString()
                 val materialOtro = binding.etMaterialOtro.text.toString()
                 val vehiculo = binding.etVehiculo.text.toString()
-                val myPost = Reservacion(0,fechaSolicitud, fechaServicio, materialOtro, vehiculo, usuarioLog.toString())
+                var usuario= usuarioLog.toString()
+                if (usuario.equals("")){
+                    usuario="erickrvrv1717@gmail.com"
+                }
+                val myPost = Reservacion(0,fechaSolicitud, fechaServicio, materialOtro, vehiculo, usuario)
                 viewModel.agregarReservacion(myPost)
                 /*viewModel.myResponse.observe(this, Observer { response ->
                     if (response.isSuccessful) {
@@ -76,4 +88,33 @@ class Add_Reservacion : Fragment() {
     private fun validos(fechaSolicitud: String, fechaServicio: String, materialOtro: String, vehiculo: String): Boolean {
         return !(fechaSolicitud.isEmpty() || fechaServicio.isEmpty() || materialOtro.isEmpty() || vehiculo.isEmpty())
     }
+
+    inner class EnviarReservacionPost: AsyncTask<Reservacion, Void?, String>() {
+        override fun doInBackground(vararg p0: Reservacion): String {
+            var respuesta = ""
+            val conn: HttpURLConnection
+            conn = URL("http://10.0.2.2:4478/api/reservacion").openConnection() as HttpURLConnection
+            conn.setRequestProperty("Content-type", "application/json; charset=UTF-8")
+
+            val dato = JSONObject()
+            dato.put("fechaSolicitud", p0[0].getFechaSolicitud())
+            dato.put("fechaServicio", p0[0].getFechaServicio())
+            dato.put("material", p0[0].getMaterial())
+            dato.put("idVehiculo", p0[0].getIdVehiculo())
+            dato.put("usuarioSolicitante", p0[0].getUsuarioSolicitante())
+
+            conn.requestMethod = "POST"
+            conn.doInput = true
+            conn.doOutput = true
+            conn.connect()
+
+            val envio = DataOutputStream(conn.outputStream)
+            envio.writeBytes(dato.toString())
+            envio.flush()
+            envio.close()
+            Toast.makeText(requireContext(), getString(R.string.reservacionRealizada), Toast.LENGTH_SHORT)
+            return (conn.responseCode).toString()
+        }
+    }
+
 }

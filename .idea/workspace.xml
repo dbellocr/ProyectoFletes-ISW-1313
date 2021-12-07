@@ -6,25 +6,18 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae09af97-147d-423f-a08d-4f5a5030a824" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ae09af97-147d-423f-a08d-4f5a5030a824" name="Default Changelist" comment="Cambios en los diseños y funcionando normalmente">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/Add_Reservacion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/Add_Reservacion.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/repository/IReservacionRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/repository/IReservacionRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/repository/ReservacionViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/repository/ReservacionViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add__reservacion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add__reservacion.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_gallery.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_gallery.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/reservacion_fila.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/reservacion_fila.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +69,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-viewC:/Users/Erick-PC/AppData/Local/Android/Sdk/sources/android-31/android/view/View.java_SELECTED" value="View" />
+    <property name="android-custom-viewC:/Users/Erick-PC/AppData/Local/Android/Sdk/sources/android-31/android/view/View.java_View_DIMENSIONS" value="1080&#10;1920" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AppProyectoSalud" />
   </component>
   <component name="RecentsManager">
@@ -198,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638851830274</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Cambios en los diseños y funcionando normalmente">
+      <created>1638857626327</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1638857626327</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,7 +222,8 @@
     <MESSAGE value="21-11-2021 Se agregó mejoras de front end y carga de google map" />
     <MESSAGE value="29-11-2021 Se agregó el archivo local.properties" />
     <MESSAGE value="Cambios realizados, revisar si le tira algun error por que mi emulador no se cuando me esta trolleando o no.... voy a arreglar los disenos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios realizados, revisar si le tira algun error por que mi emulador no se cuando me esta trolleando o no.... voy a arreglar los disenos" />
+    <MESSAGE value="Cambios en los diseños y funcionando normalmente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en los diseños y funcionando normalmente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
