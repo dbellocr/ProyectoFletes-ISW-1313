@@ -14,7 +14,7 @@
     <string name="bienvenida">¡Consigue tu flete de manera rápida y sencilla!</string>
     <string name="iniciarSesion">Inicia sesión con Google para continuar</string>
     <string name="btnIniciarSesion">Iniciar Sesión</string>
-    <string name="bienvenida_home">¡Bienvenid@ por favor esoja la opción que desea!</string>
+    <string name="bienvenida_home">¡Bienvenid@ por favor escoja la opción que desea!</string>
 
     <string name="default_web_client_id_r">608590960391-g542tplba5hcb1m77autnmig87lb5qkg.apps.googleusercontent.com</string>
     <string name="menu_camiones">Camiones disponibles</string>

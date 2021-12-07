@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.isw.proyectofletes_isw_1313.model.Reservacion
 import kotlinx.coroutines.launch
-import retrofit2.http.POST
 
 class ReservacionViewModel (private val repository: IReservacionRepository): ViewModel() {
     val myResponse: MutableLiveData<Reservacion> = MutableLiveData()

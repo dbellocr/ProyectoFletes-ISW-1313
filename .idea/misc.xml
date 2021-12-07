@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/drawable/ic_add.xml" value="0.275" />
+        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/drawable/ic_add_white.xml" value="0.275" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/drawable/notification_asset.xml" value="0.24871794871794872" />
+        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/activity_main.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/camion_fila.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/fragment_add__reservacion.xml" value="0.25" />
+        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/fragment_add__reservacion.xml" value="0.33" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/fragment_camiones.xml" value="0.20625" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/fragment_gallery.xml" value="0.25" />
+        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/fragment_home.xml" value="0.2078125" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/fragment_slideshow.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/reservacion_fila.xml" value="0.22" />
+        <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/layout/reservacion_fila.xml" value="0.5" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/Users/Erick-PC/AndroidStudioProjects/ProyectoFletes-ISW-1313/app/src/main/res/xml/seguridad.xml" value="0.10833333333333334" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/ProyectoFletesISW1313/app/src/main/res/drawable/ic_camiones.xml" value="0.2703125" />
