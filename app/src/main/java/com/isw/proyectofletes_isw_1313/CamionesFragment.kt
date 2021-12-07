@@ -38,7 +38,6 @@ class CamionesFragment : Fragment() {
         _binding = FragmentCamionesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
         IVehiculoRepository().getCamiones().enqueue(object : Callback<List<Vehiculo>> {
             override fun onResponse(
                 call: Call<List<Vehiculo>>,

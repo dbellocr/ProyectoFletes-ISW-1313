@@ -13,11 +13,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae09af97-147d-423f-a08d-4f5a5030a824" name="Default Changelist" comment="Cambios en los diseños y funcionando normalmente">
+    <list default="true" id="ae09af97-147d-423f-a08d-4f5a5030a824" name="Default Changelist" comment="Cambios en los diseños... (No me funciono el Post de varias maneras intentadas... estoy seguro que andaba cerca pero ya estoy super cansado... )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/Add_Reservacion.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/Add_Reservacion.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/CamionesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/CamionesFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add__reservacion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add__reservacion.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/adapter/VehiculoAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/adapter/VehiculoAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/ui/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/isw/proyectofletes_isw_1313/ui/home/HomeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638857626327</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cambios en los diseños... (No me funciono el Post de varias maneras intentadas... estoy seguro que andaba cerca pero ya estoy super cansado... )">
+      <created>1638864295237</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1638864295239</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +232,8 @@
     <MESSAGE value="29-11-2021 Se agregó el archivo local.properties" />
     <MESSAGE value="Cambios realizados, revisar si le tira algun error por que mi emulador no se cuando me esta trolleando o no.... voy a arreglar los disenos" />
     <MESSAGE value="Cambios en los diseños y funcionando normalmente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en los diseños y funcionando normalmente" />
+    <MESSAGE value="Cambios en los diseños... (No me funciono el Post de varias maneras intentadas... estoy seguro que andaba cerca pero ya estoy super cansado... )" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en los diseños... (No me funciono el Post de varias maneras intentadas... estoy seguro que andaba cerca pero ya estoy super cansado... )" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

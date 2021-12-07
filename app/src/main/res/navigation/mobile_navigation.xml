@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_camionesFragment"
             app:destination="@id/camionesFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
     </fragment>
 
     <fragment
@@ -38,6 +41,9 @@
         <action
             android:id="@+id/action_camionesFragment_to_nav_home"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_camionesFragment_to_nav_add_Reservacion"
+            app:destination="@id/nav_add_Reservacion" />
     </fragment>
     <fragment
         android:id="@+id/nav_add_Reservacion"

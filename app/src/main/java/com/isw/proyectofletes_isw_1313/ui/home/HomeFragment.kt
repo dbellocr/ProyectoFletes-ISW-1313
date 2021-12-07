@@ -37,6 +37,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_nav_home_to_camionesFragment)
         }
 
+        binding.btConsultarFletes.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_home_to_nav_gallery)
+        }
+
         return root
     }
 
