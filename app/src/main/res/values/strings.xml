@@ -24,4 +24,9 @@
     <string name="cerrar_sesion_titulo">¿Desea cerrar sesion?</string>
     <string name="cerrar_sesion_mensaje">¿Seguro/a que desea cerrar sesion?</string>
     <string name="creadores">Creado por Daniel Bello y Erick Rodriguez</string>
+
+    <string name="notification_channel_id" translatable="false">Notification_channel</string>
+    <string name="notification_title">Fletes</string>
+    <string name="faltaInfo">Faltan datos por digitar</string>
+    <string name="reservacionRealizada">Reservacion realizada con exito!</string>
 </resources>

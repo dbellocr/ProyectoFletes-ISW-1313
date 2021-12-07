@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var binding: ActivityMainBinding
-
+    companion object {
+        var usuarioLog : String =""
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,9 +82,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateUI(currentUser: FirebaseUser?) = if(currentUser != null){
         val intento = Intent(baseContext, Principal::class.java)
+        usuarioLog =currentUser.email.toString()
         startActivity(intento)
-
-
     }else{
 
     }

@@ -19,7 +19,11 @@
         android:id="@+id/nav_gallery"
         android:name="com.isw.proyectofletes_isw_1313.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_add_Reservacion"
+            app:destination="@id/nav_add_Reservacion" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -34,5 +38,17 @@
         <action
             android:id="@+id/action_camionesFragment_to_nav_home"
             app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_Reservacion"
+        android:name="com.isw.proyectofletes_isw_1313.Add_Reservacion"
+        android:label="fragment_add__reservacion"
+        tools:layout="@layout/fragment_add__reservacion" >
+        <action
+            android:id="@+id/action_nav_add_Reservacion_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <argument
+             android:name="vehiculoActual"
+             app:argType="com.isw.proyectofletes_isw_1313.model.Vehiculo" />
     </fragment>
 </navigation>
